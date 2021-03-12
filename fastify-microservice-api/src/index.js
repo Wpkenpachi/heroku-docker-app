@@ -5,6 +5,7 @@ const DBClient = require('./database/connection')
 
 const { FAST_API_PORT: PORT } = process.env;
 
+fastify.register(require('./routes'))
 fastify.register(require('./routes/products'))
 
 const start = async () => {
