@@ -5,3 +5,5 @@ async function routes(fastify, _options) {
     })
   })
 }
+
+module.exports = routes
