@@ -1,0 +1,4 @@
+build:
+  docker:
+    fastify: fastify-microservice-api/Dockerfile
+run:
