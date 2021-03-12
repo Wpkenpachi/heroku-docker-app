@@ -1,5 +1,5 @@
 build:
   docker:
-    fastify: fastify-microservice-api/Dockerfile
+    web: fastify-microservice-api/Dockerfile
 run:
-  fastify: npm start
+  web: npm start

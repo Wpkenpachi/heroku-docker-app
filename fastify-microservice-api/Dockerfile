@@ -6,16 +6,10 @@ COPY package*.json ./
 
 RUN npm install
 
-ENV PGUSER=dbuser \
-  PGHOST=database.server.com \
-  PGPASSWORD=secretpassword \
-  PGDATABASE=mydb \
-  PGPORT=3211
+ENV CONNECTION_STRING=postgres://jsdsraoymgxlko:1ff001c18e4945b08a039366c9322f388a973e08c9845ed8cb27900c35e305bc@ec2-3-87-180-131.compute-1.amazonaws.com:5432/d11l7mjgi05s25
 
-ENV FAST_API_PORT=80
+ENV FAST_API_HOST=0.0.0.0
 
 COPY . .
-
-EXPOSE ${FAST_API_PORT}:${FAST_API_PORT}
 
 CMD [ "npm", "start" ]
